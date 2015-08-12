@@ -1,6 +1,6 @@
 /**
- * Simple search engine built with GruntJS and AngularJS v0.0.1
- * Wednesday, August 12th, 2015, 2:15:30 AM
+ * Simple search engine v0.0.1
+ * Wednesday, August 12th, 2015, 2:28:50 AM
  * 
  * 2015 Andrzej Dubiel | http://dubiel.me/
  */
