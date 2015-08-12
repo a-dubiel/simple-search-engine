@@ -1,6 +1,6 @@
 /**
  * Simple search engine v0.0.1
- * Wednesday, August 12th, 2015, 9:25:44 AM
+ * Wednesday, August 12th, 2015, 5:12:45 PM
  * 
  * 2015 Andrzej Dubiel | http://dubiel.me/
  */

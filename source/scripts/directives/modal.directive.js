@@ -8,7 +8,7 @@
 
   /**
   * @desc modal windows
-  * @example <div modal-window show="" data="data"></div>
+  * @example <div modal-window show="false" data="data"></div>
   */
   angular
   .module('app')
