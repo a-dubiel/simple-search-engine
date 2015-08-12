@@ -1,7 +1,7 @@
 {
   "name": "simple-search-engine",
-  "title": "Simple search engine built with GruntJS and AngularJS",
-  "description": "This is a task made for Grid Dynamics",
+  "title": "Simple search engine",
+  "description": "built with GruntJS and AngularJS. This is a task made for Grid Dynamics",
   "version": "0.0.1",
   "author": {
     "name": "Andrzej Dubiel",
