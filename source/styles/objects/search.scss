@@ -1,0 +1,131 @@
+/**
+ * Object: Search
+ * --------------------------------------------------
+ */
+
+.o-search {
+  @include span-columns(12);
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  position: relative;
+  
+  @include media(min-width $medium-screen) {
+    @include span-columns(8);
+    @include shift(2);
+    margin-top: 2em;
+  }
+
+  @include media(min-width $large-screen) {
+    @include span-columns(6);
+    @include shift(3);
+  }
+
+}
+
+.o-search__title {
+  border-bottom: 1px solid $base-background-color;
+  font-size: em(16); 
+  line-height: 1em;
+  margin: 0;
+  padding: em(15);
+}
+
+.o-search__count {
+  color: $medium-gray;
+  font-size: em(12);
+  font-weight: 700;
+  padding: em(20); 
+}
+
+.o-search__loader {
+  @include transition(opacity .3s ease-in-out);
+  height: 20px;
+  opacity: 0;
+  width: 20px;
+
+  &.is-loading {
+    opacity: 1;
+  }
+}
+
+.o-search__input {
+  border-radius: 25px;
+  padding: .3em 2.5em;
+}
+
+.o-search__input--container {
+  border-bottom: 1px solid $base-background-color;
+  padding: em(15);
+  position: relative;
+}
+
+.o-search__input__icon {
+  @include transform(translateY(-50%));
+  position: absolute;
+  top: 50%;
+}
+
+.o-search__input__icon--left {
+  height: 15px;
+  left: em(30);
+  width: 15px;
+}
+
+.o-search__input__icon--right {
+  right: em(30);
+}
+
+.o-search__loader__animation {
+  height: 20px;
+  width: 20px;
+  path { fill: $action-color; }
+}
+
+.o-search__icon {
+  height: 15px;
+  width: 15px;
+  g { stroke: $action-color; }
+}
+
+.o-search__item {
+  @include transition(background-color .3s ease-in-out);
+  background-color: #fff;
+  border-bottom: 1px solid $base-background-color;
+  cursor: pointer;
+  padding: em(15);
+  position: relative;
+
+  &:hover {
+    background-color: lighten($action-color, 50%);
+  }
+}
+
+.o-search__item__title {
+  font-size: em(20); 
+  margin: 0;
+}
+
+.o-search__item__details {
+  color: $medium-gray;
+  font-size: em(14);
+  margin: 0 1em 0 0;
+}
+
+.o-search__icon--small {
+  vertical-align: -1px;
+  g { fill: $medium-gray; }
+  path { fill: $light-gray; }
+}
+
+.o-search__icon__expand {
+  @include transform(translateY(-50%));
+  height: 24px;
+  position: absolute;
+  right: em(15);
+  top: 50%;
+  width: 24px; 
+  path { fill: $action-color; }
+}
+
+

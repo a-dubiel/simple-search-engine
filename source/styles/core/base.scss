@@ -1,0 +1,19 @@
+/**
+ * Core: Base
+ * --------------------------------------------------
+ */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $base-background-color;
+}
+
+.container {
+  @include outer-container();
+  padding: 1em;
+}

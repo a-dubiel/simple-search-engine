@@ -1,0 +1,17 @@
+exclude:
+ - 'source/styles/components/*'
+ - 'source/styles/core/base/*'
+ - 'source/styles/core/normalize.scss'
+
+
+linters:
+  StringQuotes:
+    style: double_quotes
+  Comment:
+    enabled: false
+  ColorKeyword:
+    enabled: false
+  DeclarationOrder:
+    enabled: false
+  SelectorFormat:
+    convention: hyphenated_BEM

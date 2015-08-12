@@ -1,0 +1,81 @@
+/**
+ * Object: Modal
+ * --------------------------------------------------
+ */
+
+.c-modal {
+
+  &.is-active {
+    .c-modal__overlay {
+      @include transition(background-color .3s ease-in-out);
+      background-color: rgba(0, 0, 0, .5);
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+    }
+
+    .c-modal__body {
+      display: block;
+    }
+  }
+ }
+
+.c-modal__overlay {
+  background: rgba(0, 0, 0, 0);
+  height: 0;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 0;
+  z-index: 0;
+}
+
+.c-modal__body {
+  @include transform(translate(-50%, -50%));
+  @include span-columns(12);
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  display: none;
+  left: 50%;
+  max-width: 400px;
+  position: fixed;
+  top: 50%;
+  z-index: 555;
+}
+
+.c-modal__title {
+  border-bottom: 1px solid $base-background-color;
+  font-size: em(16); 
+  line-height: 1em;
+  margin: 0 0 .5em;
+  padding: em(15);
+}
+
+.c-modal__content {
+  position: relative;
+}
+
+.c-modal__close {
+  background-color: transparent;
+  color: $action-color;
+  position: absolute;
+  right: 0;
+  top: .25em;
+}
+
+.c-modal__label {
+  color: $medium-gray;
+  font-size: em(14);
+  margin: 0;
+  padding: 0 em(15);
+}
+
+.c-modal__data {
+  font-size: em(14);
+  margin: 0 0 1em;
+  padding: 0 em(15);
+}

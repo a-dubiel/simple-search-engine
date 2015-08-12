@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Simple Search Engine</title>
+  <!-- process:template
+  <% if (environment === 'dev') { %>
+  <link rel="stylesheet" href="/styles/style.css">
+  <script src="/scripts/app.js"></script>
+  <% } else if (environment === 'stage' || environment === 'prod') { %>
+  <link rel="stylesheet" href="/styles/style.min.css">
+  <script src="/scripts/app.min.js"></script>
+  <% } %>
+  /process -->
+</head>
+<body ng-controller="MainCtrl as main">
+  <div class="container">
+    <!-- search  -->
+    <div class="o-search">
+      <div class="o-search__count u-pull-right" ng-cloak>{{ main.filteredUsers.length > 0 ? main.filteredUsers.length + ' results' : (main.loading ? 'Fetching data...' : 'Nothing found') }}</div>
+      <h1 class="o-search__title" ng-cloak>{{ main.title }}</h1>
+      <!-- search status -->
+      <div class="o-search__input--container"> 
+        <input type="search" class="o-search__input" placeholder="Type name or e-mail"  ng-model="main.search" ng-model-options="{ debounce: 100 }"/>
+        <div class="o-search__input__icon o-search__input__icon--right">
+          <div class="o-search__loader" ng-class="{ 'is-loading' : main.loading }">
+            <svg version="1.1" class="o-search__loader__animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80 80" xml:space="preserve"><title>Loader Icon</title>
+              <path d="M40,72C22.4,72,8,57.6,8,40C8,22.4,
+              22.4,8,40,8c17.6,0,32,14.4,32,32c0,1.1-0.9,2-2,2
+              s-2-0.9-2-2c0-15.4-12.6-28-28-28S12,24.6,12,40s12.6,
+              28,28,28c1.1,0,2,0.9,2,2S41.1,72,40,72z">
+              <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 40 40" to="360 40 40" dur="0.6s" repeatCount="indefinite" />
+            </path>
+          </svg>
+        </div>
+      </div>
+      <div class="o-search__input__icon o-search__input__icon--left">
+        <svg class="o-search__icon" width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"><title>Icon Search</title><g stroke-width="2" stroke-linejoin="round" fill="none" fill-rule="evenodd"><path d="M17.5 9.5c0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.42 3.582-8 8-8s8 3.58 8 8z"/><path d="M15.156 15.156L24.5 24.5" stroke-linecap="round"/></g></svg>
+      </div>
+    </div>
+
+    <ul class="o-search__results">
+      <li class="o-search__item" ng-repeat="user in (main.filteredUsers = (main.users | searchFor:main.search))" ng-click="main.showUserInfo(user)">
+        <h2 class="o-search__item__title">{{ user.name }}</h2>
+        <span class="o-search__item__details">
+          <svg width="17" height="10" class="o-search__icon--small" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg"><title>Icon Mail</title><g  fill-rule="evenodd"><path d="M21.71.976L11.314 9.39c-.092.073-.204.11-.315.11-.11 0-.223-.037-.315-.11L.292.975C.112 1.276 0 1.624 0 2v11c0 1.103.897 2 2 2h18c1.103 0 2-.897 2-2V2c0-.376-.11-.723-.29-1.024"/><path d="M20.988.272C20.695.102 20.36 0 20 0H2c-.36 0-.695.103-.988.272L11 8.357 20.988.272"/></g></svg>
+          <span class="u-text-lowercase">{{ user.email }}</span>
+        </span>
+        <span class="o-search__item__details">
+          <svg width="11" height="12" class="o-search__icon--small" viewBox="0 0 22 23" xmlns="http://www.w3.org/2000/svg"><title>Icon Map</title><g fill-rule="evenodd"><path d="M.27.875C.104.96 0 1.133 0 1.32v16c0 .16.078.313.21.407L7 22.577V5.35L.79.912C.637.805.437.79.27.875M21.79 5.913L15 1.063v17.23l6.21 4.433c.15.11.348.126.52.04.165-.087.27-.26.27-.446v-16c0-.162-.078-.314-.21-.407M8 22.578l6-4.287V1.064L8 5.348v17.23z"/></g></svg>
+          {{ user.address.city }}
+        </span>
+        <svg class="o-search__icon__expand" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Icon Plus</title><path d="M23 11H13V1c0-.552-.426-1-.978-1-.553 0-1 .447-1 1l-.01 10H1c-.553 0-1 .447-1 1 0 .552.447 1 1 1h10.01L11 23c0 .55.446 1 .998 1 .553 0 1-.447 1.002-1V13h10c.552 0 1-.448 1-1 0-.553-.448-1-1-1" fill="#0B0B0A" fill-rule="evenodd"/></svg>
+      </li>
+    </ul> 
+  </div>
+  <!-- /search  -->
+</div>
+
+<modal-window show="" data="main.user"></modal-window>
+
+</body>
+</html>
