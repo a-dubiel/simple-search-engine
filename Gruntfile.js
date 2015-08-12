@@ -92,7 +92,6 @@ module.exports = function(grunt) {
    * --------------------------------------------------
    */
 
-  grunt.loadNpmTasks('assemble');
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
 

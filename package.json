@@ -1,6 +1,6 @@
 {
-  "name": "grid-dynamics-task",
-  "title": "Grid Dynamics Task",
+  "name": "simple-search-engine",
+  "title": "Simple search engine built with GruntJS and AngularJS",
   "description": "This is a task made for Grid Dynamics",
   "version": "0.0.1",
   "author": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:pier0n/grid-dynamics-task.git"
+    "url": "git@github.com:pier0n/simple-search-engine.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
