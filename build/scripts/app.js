@@ -1,6 +1,6 @@
 /**
  * Simple search engine v0.0.1
- * Wednesday, August 12th, 2015, 5:12:45 PM
+ * Wednesday, August 12th, 2015, 5:21:33 PM
  * 
  * 2015 Andrzej Dubiel | http://dubiel.me/
  */
@@ -28537,7 +28537,7 @@ function MainCtrl($scope, userService) {
 
   /**
   * @desc modal windows
-  * @example <div modal-window show="" data="data"></div>
+  * @example <div modal-window show="false" data="data"></div>
   */
   angular
   .module('app')
