@@ -8,7 +8,7 @@ Developed by Andrzej Dubiel for good folks at Grid Dynamics.
 
 ### Introduction
 
-Dead simple search engine with modal functionality.
+Dead simple search engine with modal functionality. [Demo here](http://dubiel.me/simple-search-engine/)
 
 ---
 
