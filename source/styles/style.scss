@@ -5,6 +5,7 @@
 @import "components/bourbon/bourbon";
 @import "components/neat/neat";
 @import "components/base/base";
+@import "components/modal/modal";
 
 // Core
 @import "core/base";
@@ -14,5 +15,4 @@
 
 // Objects
 @import "objects/search";
-@import "objects/modal";
 

@@ -846,6 +846,119 @@ picture
 }
 
 /**
+ * Component: Modal
+ * --------------------------------------------------
+ */
+
+.c-modal.is-active .c-modal__overlay
+{
+    visibility: visible;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: background-color .3s ease-in-out;
+            transition: background-color .3s ease-in-out;
+
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.c-modal.is-active .c-modal__body
+{
+    display: block;
+}
+
+.c-modal__overlay
+{
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+
+    visibility: hidden;
+
+    width: 0;
+    height: 0;
+
+    opacity: 1;
+    background: transparent;
+}
+
+.c-modal__body
+{
+    position: fixed;
+    z-index: 555;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    display: none;
+    float: left;
+
+    width: 100%;
+    max-width: 400px;
+    margin-right: 2.35765%;
+
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.c-modal__body:last-child
+{
+    margin-right: 0;
+}
+
+.c-modal__title
+{
+    font-size: 1em;
+    line-height: 1em;
+
+    margin: 0 0 .5em;
+    padding: .9375em;
+
+    border-bottom: 1px solid #eee;
+}
+
+.c-modal__content
+{
+    position: relative;
+}
+
+.c-modal__close
+{
+    position: absolute;
+    top: .25em;
+    right: 0;
+
+    color: #e87e04;
+    background-color: transparent;
+}
+
+.c-modal__label
+{
+    font-size: .875em;
+
+    margin: 0;
+    padding: 0 .9375em;
+
+    color: #999;
+}
+
+.c-modal__data
+{
+    font-size: .875em;
+
+    margin: 0 0 1em;
+    padding: 0 .9375em;
+}
+
+/**
  * Core: Base
  * --------------------------------------------------
  */
@@ -1088,119 +1201,6 @@ body
 .o-search__icon__expand path
 {
     fill: #e87e04;
-}
-
-/**
- * Object: Modal
- * --------------------------------------------------
- */
-
-.c-modal.is-active .c-modal__overlay
-{
-    visibility: visible;
-
-    width: 100%;
-    height: 100%;
-
-    -webkit-transition: background-color .3s ease-in-out;
-            transition: background-color .3s ease-in-out;
-
-    opacity: 1;
-    background-color: rgba(0, 0, 0, .5);
-}
-
-.c-modal.is-active .c-modal__body
-{
-    display: block;
-}
-
-.c-modal__overlay
-{
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    left: 0;
-
-    visibility: hidden;
-
-    width: 0;
-    height: 0;
-
-    opacity: 1;
-    background: transparent;
-}
-
-.c-modal__body
-{
-    position: fixed;
-    z-index: 555;
-    top: 50%;
-    left: 50%;
-
-    display: block;
-    display: none;
-    float: left;
-
-    width: 100%;
-    max-width: 400px;
-    margin-right: 2.35765%;
-
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-
-    border-radius: 5px;
-    background: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-}
-
-.c-modal__body:last-child
-{
-    margin-right: 0;
-}
-
-.c-modal__title
-{
-    font-size: 1em;
-    line-height: 1em;
-
-    margin: 0 0 .5em;
-    padding: .9375em;
-
-    border-bottom: 1px solid #eee;
-}
-
-.c-modal__content
-{
-    position: relative;
-}
-
-.c-modal__close
-{
-    position: absolute;
-    top: .25em;
-    right: 0;
-
-    color: #e87e04;
-    background-color: transparent;
-}
-
-.c-modal__label
-{
-    font-size: .875em;
-
-    margin: 0;
-    padding: 0 .9375em;
-
-    color: #999;
-}
-
-.c-modal__data
-{
-    font-size: .875em;
-
-    margin: 0 0 1em;
-    padding: 0 .9375em;
 }
 
 @media screen and (min-width: 40em)
