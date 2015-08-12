@@ -2,7 +2,7 @@
 Developed by Andrzej Dubiel for good folks at Grid Dynamics.
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![Built with AngularJS](https://builtwith.angularjs.org/img/AngularJS-large.png)](https://angularjs.org/)
+[![Built with AngularJS](https://builtwith.angularjs.org/img/AngularJS-small.png)](https://angularjs.org/)
 
 ---
 
